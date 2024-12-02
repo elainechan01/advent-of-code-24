@@ -13,9 +13,13 @@ def main():
         
         hh = HystorianHysteria()
         hh.getLists(f_contents_split)
-        res = hh.calculateSumOfDist()
+        res = hh.calcSumOfDist()
+        res2 = hh.calcSimilarityScore()
         
+        print("===Part 1===")
         print(res)
+        print("===Part 2===")
+        print(res2)
     finally:
         f.close()
 
