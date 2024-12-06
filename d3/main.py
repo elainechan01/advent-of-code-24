@@ -12,11 +12,13 @@ def main():
         mio = MullItOver()
         mio.getMultiplicationsOnly(f_contents)
         res = mio.calculateSumOfMultiplications()
+        mio.getConditionalMultiplications(f_contents)
+        res2 = mio.calculateSumOfMultiplicationWithConditions()
         
         print("===Part 1===")
         print(res)
         print("===Part 2===")
-        # print(res2)
+        print(res2)
     finally:
         f.close()
 
