@@ -11,14 +11,15 @@ def main():
         f_contents = f.read()
         f_contents_split = f_contents.split('\n')
         f_contents_split = [[int(num) for num in report.split()] for report in f_contents_split]
-        
+        print(f_contents_split)
         rnr = RedNosedReports()
         res = rnr.checkReports(f_contents_split)
+        res2 = rnr.checkReportsWithProblemDampener(f_contents_split)
         
         print("===Part 1===")
         print(res)
-        # print("===Part 2===")
-        # print(res2)
+        print("===Part 2===")
+        print(res2)
     finally:
         f.close()
 
