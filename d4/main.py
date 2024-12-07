@@ -12,11 +12,12 @@ def main():
         f_contents_split = f_contents.split('\n')
         cs = CeresSearch([[val for val in line] for line in f_contents_split])
         res = cs.count_xmas()
+        res2 = cs.count_x_mas()
         
         print("===Part 1===")
         print(res)
-        # print("===Part 2===")
-        # print(res2)
+        print("===Part 2===")
+        print(res2)
     finally:
         f.close()
 

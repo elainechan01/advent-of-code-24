@@ -33,3 +33,19 @@ class CeresSearch:
             # print(res, re.findall("XMAS", "".join(text)))
             res += len(re.findall("XMAS", "".join(text)))
         return res
+    
+    def count_x_mas(self) -> int:
+        '''
+        Count the number of times X-MAS appears
+        '''
+        res = 0
+        rows = len(self.ws)
+        cols = len(self.ws[0])
+        for row in range(rows):
+            for col in range(cols):
+                if 0 <= row-1 and 0 <= col-1 and row+1 < rows and col+1 < cols: 
+                    lr = self.ws[row-1][col-1] + self.ws[row][col] + self.ws[row+1][col+1]
+                    rl = self.ws[row-1][col+1] + self.ws[row][col] + self.ws[row+1][col-1]
+                    if (lr == "MAS" or lr == "SAM") and (rl == "MAS" or rl == "SAM"):
+                        res += 1
+        return res
