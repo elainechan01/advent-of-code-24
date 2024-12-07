@@ -1,7 +1,7 @@
 """
 Author: Elaine Chan @elainechan01
-Date: 12/2/24
-Program: Advent of Code Day 2: Red-Nosed Reports
+Date: 12/5/24
+Program: Advent of Code Day 3: Mull It Over
 """
 from mio import MullItOver
 
